@@ -1,0 +1,10 @@
+.suggestion-container {
+  max-height: 92px;
+  overflow-y: scroll;
+  width: 50.1%;
+  border-radius: 8px;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+}
+/*# sourceMappingURL=autocomplete.css.map */

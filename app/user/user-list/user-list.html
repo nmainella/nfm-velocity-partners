@@ -1,0 +1,27 @@
+<span class="bullet-query" ng-if="vm.query">{{vm.query}}</span>
+<table class="table" ng-if="vm.users.length">
+    <thead>
+    <tr class="header-row">
+        <th class="header-cell">Name</th>
+        <th class="header-cell">Username</th>
+        <th class="header-cell">Location</th>
+        <th class="header-cell">Blog</th>
+        <th class="col-lg-3"><3 color</th>
+    </tr>
+    </thead>
+    <tbody id="user-list-body" ng-style="{'max-height': vm.userListTableDynamicHeight()}">
+    <tr ng-repeat="user in vm.users" class="row" id="user">
+        <td class="cell">{{user.first_name+' '+user.last_name}}</td>
+        <td class="cell"><strong class="shown-xs">Username</strong> {{user.username}}</td>
+        <td class="cell"><span class="shown-xs">Lives in</span> {{user.city}}, {{user.country}}</td>
+        <td class="cell"><a ng-href="{{user.blog}}" target="blank">Access to {{user.first_name}}'s blog</a></td>
+        <td><span ng-style="{'background': user.fav_color}"
+                                   ng-if="user.fav_color !== null" class="fav-color"></span></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="container" ng-if="!vm.users.length">
+    Lo sentimos, no se encontraron resultados para {{vm.query}}.
+    <span class="link" ng-click="vm.tryAgain()">Volver a intentar</span>
+</div>

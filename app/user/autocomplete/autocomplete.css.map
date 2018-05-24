@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,qBAAqB,CAAC;EACpB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,GAAG;EAClB,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,CAAC;EACV,gBAAgB,EAAE,KAAK;CAExB",
+    "sources": [
+        "autocomplete.scss"
+    ],
+    "names": [],
+    "file": "autocomplete.css"
+}

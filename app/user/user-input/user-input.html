@@ -1,0 +1,12 @@
+<div id="user-input-wrapper">
+    <input type="text" ng-model="vm.query" id="search-user-query">
+    <div class="icon-container">
+        <span class="user-input icon-search-1" 
+        ng-click="vm.onSearchButtonClick()"></span>
+    </div>
+</div>
+<auto-complete-component
+        on-suggestion="vm.onSuggestion"
+        avoid-auto-complete="vm.avoidAutoComplete"
+        query="vm.query"></auto-complete-component>
+

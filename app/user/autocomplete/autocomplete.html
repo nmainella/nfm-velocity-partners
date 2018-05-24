@@ -1,0 +1,7 @@
+<div class="suggestion-container" ng-if="vm.showAutoSuggest()"
+ng-style="{'width': vm.getDynamicWidth()}">
+    <auto-complete-item-component ng-repeat="user in vm.users"
+                                  item="user"
+                                  ng-click="vm.onItemClick(user)">
+    </auto-complete-item-component>
+</div>

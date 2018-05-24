@@ -1,0 +1,78 @@
+.link {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.table {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 100%;
+  max-height: 700px;
+  overflow-y: scroll;
+  display: block;
+  margin-bottom: 2em;
+  background-color: #fff;
+  border: 0;
+  border-collapse: collapse;
+  color: #212121;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 1.6em;
+  vertical-align: top;
+  border: inherit;
+}
+
+.table thead tr {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.table thead th {
+  font-weight: 400;
+  color: #3f3f3f;
+  vertical-align: bottom;
+}
+
+.table caption {
+  opacity: 0.5;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: left;
+  line-height: 2;
+  margin: 1em 0;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+  .table thead, .table tfoot {
+    display: none;
+  }
+  .table tbody {
+    display: block;
+  }
+  .table tbody tr {
+    display: block;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    margin-bottom: 1.6em;
+  }
+  .table tbody tr td {
+    background-color: #fff;
+    display: block;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .table tbody tr td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: inherit;
+    font-weight: 400;
+    color: #3f3f3f;
+  }
+}
+/*# sourceMappingURL=user-list.css.map */

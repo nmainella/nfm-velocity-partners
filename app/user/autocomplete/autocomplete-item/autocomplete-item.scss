@@ -1,0 +1,17 @@
+.suggestion {
+  font-size: 20px;
+  overflow: hidden;
+  padding: 0 15px;
+  line-height: 45px;
+  border-radius: 0 3px 3px 0;
+  -webkit-transition: background .15s linear;
+  transition: background .15s linear;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: rgba(158, 158, 158, 0.18);
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+//@import 'autocomplete-item-font.css';

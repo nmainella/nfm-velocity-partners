@@ -1,42 +1,43 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
+describe('Component: userSearch', () => {
+    let $compile;
+    let scope;
 
-describe('my app', function() {
-
-
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
-
-
-  describe('view1', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#!/view1');
+    beforeEach(() => {
+        angular.mock.module('vp');
     });
 
+    beforeEach(inject(($rootScope, _$compile_) => {
+        scope = $rootScope.$new();
+        $compile = _$compile_;
+    }));
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+    it('Should display list of users', () => {
+        let element = angular.element(`<user-list-component list="list"/>`);
+        element = $compile(element)(scope);
+        scope.$digest();
+        expect(element[0].querySelectorAll('#user').length).toBe(198);
+    });
+});
+
+describe('Component: userSearch', () => {
+    let $compile;
+    let scope;
+
+    beforeEach(() => {
+        angular.mock.module('vp');
     });
 
-  });
+    beforeEach(inject(($rootScope, _$compile_) => {
+        scope = $rootScope.$new();
+        $compile = _$compile_;
+    }));
 
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#!/view2');
+    it('Should display list of users', () => {
+        let element = angular.element(`<user-list-component list="list"/>`);
+        element = $compile(element)(scope);
+        scope.$digest();
+        expect(element[0].querySelectorAll('#user').length).toBe(198);
     });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
-    });
-
-  });
 });
